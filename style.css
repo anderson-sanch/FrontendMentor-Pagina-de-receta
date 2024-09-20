@@ -1,0 +1,252 @@
+/*Estilos generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+@font-face {
+    font-family: 'Outfit';
+    src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+}
+
+:root{
+    --White:hsl(0, 0%, 100%);
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+    --Brown-800: hsl(14, 45%, 36%);
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+}
+
+.container{
+    width: 82%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/*Header*/
+.header_container{
+    width: 100%;
+    height: 185px;
+    margin-bottom: 25px;
+}
+
+.header__img--container{
+    width: auto;
+    height: auto;
+
+    >img{
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+/*Contenido principal*/
+
+main{
+    height:  auto;
+}
+
+/*Titulo*/
+.container--title h1{
+    font-family: 'Young Serif';
+    font-weight: 400;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.container--title p {
+    font-size: 16px;
+    font-family: 'Outfit';
+    font-weight: 600;
+    color: var(--Stone-600);
+}
+
+/*Tiempo de preparacion*/
+
+.main__preparation-time{
+    background-color: var(--Rose-50);
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.container-time--title{
+    color: var(--Rose-800);
+    font-family: 'Outfit';
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.container--list{
+    padding-left: 30px;
+    width: 225px;
+    font-family: 'Outfit';
+
+    >li {
+        margin-bottom: 10px;
+        line-height: 25px;
+        color: var(--Stone-600);
+        font-weight: 600;
+        padding-left: 10px;
+
+        >span{
+            font-weight: 700;
+            color: var(--Stone-900);
+        }
+    }
+    >li::marker{
+        color:  var(--Rose-800);
+    }
+}
+
+/*Lista de ingredientes*/
+
+.ingredients__title{
+    margin-bottom: 25px;
+    color: var(--Brown-800);
+    font-family: 'Young Serif';
+    font-weight: 500;
+}
+
+.ingredients__list{
+    padding-left: 25px;
+    padding-bottom: 25px;
+    font-family: 'Outfit';
+    font-weight: 400;
+    border-bottom: 1px solid #ccc;
+
+
+    >li{
+        padding-left: 8px;
+        margin-bottom: 12px;
+        color: var(--Stone-600);
+    }
+}
+
+/*Instrucciones*/
+
+.main__instructions{
+    margin-top: 25px;
+}
+
+.instructions--title{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--Brown-800);
+    font-family: 'Young Serif';
+    margin-bottom: 25px;
+}
+
+.instructions--list{
+    font-family: 'Outfit';
+    color: var(--Brown-800);
+    margin-left: 20px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+
+    >li{
+        margin-bottom: 10px;
+        padding-left: 10px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    >li span{
+        color: var(--Stone-600);
+        font-weight: 800;
+    }
+}
+
+.instructions--list::marker{
+    font-weight: 800;
+}
+
+/*tabla nutricional*/
+.main__nutrition{
+    margin-top: 25px;
+}
+
+.nutrition--title{
+    margin-bottom: 25px;
+    color: var(--Brown-800);
+    font-family: 'Young Serif';
+    letter-spacing: 1px;
+}
+
+.nutrition--paragraph{
+    margin-bottom: 25px;
+    color: var(--Stone-600);
+    font-weight: 400;
+    font-family: 'Outfit';
+}
+
+.nutrition-table {
+    width: 100%;
+    margin: 20px auto;
+    font-family: 'Outfit';
+}
+
+
+
+.nutrition-table .label {
+    font-weight: 400;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.nutrition-table .value {
+    padding: 10px;
+    text-align: left;
+    color: var(--Brown-800);
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+@media (min-width: 380px) {
+    body{
+        background-color: var(--Stone-100);
+    }
+
+    .container{
+        max-width: 1000px;
+    }
+    main{
+        background-color: var(--White);
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .header_container{
+        max-width: 1000px;
+        height: auto;
+        background-color: var(--White);
+        margin: 0 auto 0 auto;
+        padding: 5px 10px;
+        border-radius: 20px 20px 0 0 ;
+    }
+
+    .header__img--container{
+        width: 80%;
+        margin: 35px auto;
+    }
+}
+
+@media (min-width: 1000px) {
+    .header_container{
+        max-width: 1000px;
+        height: auto;
+        background-color: var(--White);
+        margin: 40px auto 0 auto;
+        padding: 5px 10px;
+        border-radius: 20px 20px 0 0 ;
+    }
+}
